@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1721809F-73C1-4C97-923E-6141F1734478}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>ExtendHealth.SqlServer.IntegrationServices.Extensions</AssemblyName>
+    <RootNamespace>$(AssemblyName)</RootNamespace>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(AppDesignerFolder)\ExtendHealth.SqlServer.IntegrationServices.snk</AssemblyOriginatorKeyFile>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags />
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SqlServer.DtsMsg, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(AppDesignerFolder)\ExtendHealth.SqlServer.IntegrationServices.snk" />
+    <Content Include="ExtendHealth.SqlServer.IntegrationServices.Extensions.extensions.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="$(AppDesignerFolder)\AssemblyInfo.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CsvColumn.cs" />
+    <Compile Include="CsvColumnCollection.cs" />
+    <Compile Include="CsvColumnDataTypeTypeConverter.cs" />
+    <Compile Include="CsvColumnIntegrationServicesTypeTypeConverter.cs" />
+    <Compile Include="CsvColumnPropertyDescriptor.cs" />
+    <Compile Include="CsvConnectionManager.cs" />
+    <Compile Include="CsvConnectionManagerAdapter.cs" />
+    <Compile Include="CsvFilePipelineComponentBase.cs" />
+    <Compile Include="CsvFilePipelineComponentException.cs" />
+    <Compile Include="CsvFileDestination.cs" />
+    <Compile Include="CsvFileSource.cs" />
+    <Compile Include="EncodingPropertyDescriptor.cs" />
+    <Compile Include="HeaderTrailerColumn.cs" />
+    <Compile Include="IntegerVariableListConverter.cs" />
+    <Compile Include="RowError.cs" />
+    <Compile Include="TrimOptions.cs" />
+    <Compile Include="VariableListConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CsvConnectionManager.ico" />
+    <EmbeddedResource Include="CsvFileDestination.ico" />
+    <EmbeddedResource Include="CsvFileSource.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF EXIST "%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v10.0A\Bin\NETFX 4.8 Tools\x64\gacutil.exe" SET GacUtil=%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v10.0A\Bin\NETFX 4.8 Tools\x64\gacutil.exe
+IF "%25GacUtil%25"=="" IF EXIST "%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v10.0A\Bin\NETFX 4.8 Tools\gacutil.exe" SET GacUtil=%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v10.0A\Bin\NETFX 4.8 Tools\gacutil.exe
+IF "%25GacUtil%25"=="" IF EXIST "%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v10.0A\Bin\NETFX 4.7.2 Tools\x64\gacutil.exe" SET GacUtil=%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v10.0A\Bin\NETFX 4.7.2 Tools\x64\gacutil.exe
+IF "%25GacUtil%25"=="" IF EXIST "%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v10.0A\Bin\NETFX 4.7.2 Tools\gacutil.exe" SET GacUtil=%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v10.0A\Bin\NETFX 4.7.2 Tools\gacutil.exe
+IF "%25GacUtil%25"=="" IF EXIST "%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v10.0A\Bin\NETFX 4.7 Tools\x64\gacutil.exe" SET GacUtil=%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v10.0A\Bin\NETFX 4.7 Tools\x64\gacutil.exe
+IF "%25GacUtil%25"=="" IF EXIST "%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v10.0A\Bin\NETFX 4.7 Tools\gacutil.exe" SET GacUtil=%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v10.0A\Bin\NETFX 4.7 Tools\gacutil.exe
+IF "%25GacUtil%25"=="" IF EXIST "%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v10.0A\Bin\NETFX 4.6.1 Tools\x64\gacutil.exe" SET GacUtil=%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v10.0A\Bin\NETFX 4.6.1 Tools\x64\gacutil.exe
+IF "%25GacUtil%25"=="" IF EXIST "%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v10.0A\Bin\NETFX 4.6.1 Tools\gacutil.exe" SET GacUtil=%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v10.0A\Bin\NETFX 4.6.1 Tools\gacutil.exe
+IF "%25GacUtil%25"=="" IF EXIST "%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v8.1A\Bin\NETFX 4.5.1 Tools\x64\gacutil.exe" SET GacUtil=%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v8.1A\Bin\NETFX 4.5.1 Tools\x64\gacutil.exe
+IF "%25GacUtil%25"=="" IF EXIST "%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v8.1A\Bin\NETFX 4.5.1 Tools\gacutil.exe" SET GacUtil=%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v8.1A\Bin\NETFX 4.5.1 Tools\gacutil.exe
+IF "%25GacUtil%25"=="" IF EXIST "%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v8.0A\Bin\NETFX 4.0 Tools\x64\gacutil.exe" SET GacUtil=%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v8.0A\Bin\NETFX 4.0 Tools\x64\gacutil.exe
+IF "%25GacUtil%25"=="" IF EXIST "%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v8.0A\Bin\NETFX 4.0 Tools\gacutil.exe" SET GacUtil=%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v8.0A\Bin\NETFX 4.0 Tools\gacutil.exe
+IF "%25GacUtil%25"=="" IF EXIST "%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\x64\gacutil.exe" SET GacUtil=%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\x64\gacutil.exe
+IF "%25GacUtil%25"=="" IF EXIST "%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\gacutil.exe" SET GacUtil=%25ProgramFiles(x86)%25\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\gacutil.exe
+IF "%25GacUtil%25"=="" SET GacUtil=gacutil.exe
+"%25GacUtil%25" /i "$(TargetPath)"
+
+SET RealProgramFiles=%25ProgramW6432%25
+IF "%25RealProgramFiles%25"=="" SET RealProgramFiles=%25ProgramFiles%25
+CALL:_CopyToDtsFolder "%25RealProgramFiles%25\Microsoft SQL Server\150\DTS\"
+IF NOT "%25RealProgramFiles%25"=="%25ProgramFiles(x86)%25" CALL:_CopyToDtsFolder "%25ProgramFiles(x86)%25\Microsoft SQL Server\150\DTS\"
+:: Also copy to SSIS 2017 folders if they exists, to ease upgrades. We'll continue to special case this, in case anyone who didn't previously build this for the prior SSIS version needs to work on upgrading a package to the new SSIS version.
+IF EXIST "%25RealProgramFiles%25\Microsoft SQL Server\140\DTS\UpgradeMappings\" COPY /Y "$(TargetDir)$(TargetName).extensions.xml" "%25RealProgramFiles%25\Microsoft SQL Server\140\DTS\UpgradeMappings\"
+IF NOT "%25RealProgramFiles%25"=="%25ProgramFiles(x86)%25" IF EXIST "%25ProgramFiles(x86)%25\Microsoft SQL Server\140\DTS\UpgradeMappings\" COPY /Y "$(TargetDir)$(TargetName).extensions.xml" "%25ProgramFiles(x86)%25\Microsoft SQL Server\140\DTS\UpgradeMappings\"
+
+
+GOTO:EOF
+
+
+:_CopyToDtsFolder
+IF EXIST "%25~dp1\Connections\" COPY /Y "$(TargetPath)" "%25~dp1\Connections\"
+IF EXIST "%25~dp1\Connections\" COPY /Y "$(TargetDir)$(TargetName).pdb" "%25~dp1\Connections\"
+IF EXIST "%25~dp1\PipelineComponents\" COPY /Y "$(TargetPath)" "%25~dp1\PipelineComponents\"
+IF EXIST "%25~dp1\PipelineComponents\" COPY /Y "$(TargetDir)$(TargetName).pdb" "%25~dp1\PipelineComponents\"
+IF EXIST "%25~dp1\UpgradeMappings\" COPY /Y "$(TargetDir)$(TargetName).extensions.xml" "%25~dp1\UpgradeMappings\"
+GOTO:EOF
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

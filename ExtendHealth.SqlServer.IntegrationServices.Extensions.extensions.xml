@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Extensions xmlns="http://www.microsoft.com/SqlServer/Dts/Extensions.xsd">
+	<!--
+	ExtendHealth.SqlServer.IntegrationServices.Extensions.CsvFileDestination, ExtendHealth.SqlServer.IntegrationServices.Extensions, Version=0.9.9.9, Culture=neutral, PublicKeyToken=f1eb66c06f18253a
+	ExtendHealth.SqlServer.IntegrationServices.Extensions.CsvFileSource, ExtendHealth.SqlServer.IntegrationServices.Extensions, Version=0.9.9.9, Culture=neutral, PublicKeyToken=f1eb66c06f18253a
+	-->
+	<Tasks>
+	</Tasks>
+	<PipelineComponents>
+	</PipelineComponents>
+	<ConnectionManagers>
+		<ConnectionManager Identifier="CSV" Model=".NET">
+			<CreationName>ExtendHealth.SqlServer.IntegrationServices.Extensions.CsvConnectionManagerAdapter, ExtendHealth.SqlServer.IntegrationServices.Extensions, Version=0.9.9.9, Culture=neutral, PublicKeyToken=f1eb66c06f18253a</CreationName>
+		</ConnectionManager>
+	</ConnectionManagers>
+	<Enumerators>
+	</Enumerators>
+	<LogProviders>
+	</LogProviders>
+</Extensions>

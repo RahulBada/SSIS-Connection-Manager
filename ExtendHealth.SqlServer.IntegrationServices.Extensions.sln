@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendHealth.SqlServer.IntegrationServices.Extensions", "ExtendHealth.SqlServer.IntegrationServices.Extensions.csproj", "{1721809F-73C1-4C97-923E-6141F1734478}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendHealth.SqlServer.IntegrationServices.Extensions.UI", "..\SSIS-Extensions\ExtendHealth.SqlServer.IntegrationServices.Extensions.UI.csproj", "{C5ECF94A-3C61-4F05-A9C3-8F1D950EDD6B}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs2010.extendhealth.com:8143/tfs/tfs%202008%20migration
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ExtendHealth.SqlServer.IntegrationServices.Extensions.csproj
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = ..\\ExtendHealth.SqlServer.IntegrationServices.Extensions.UI\\ExtendHealth.SqlServer.IntegrationServices.Extensions.UI.csproj
+		SccProjectName2 = ../ExtendHealth.SqlServer.IntegrationServices.Extensions.UI
+		SccLocalPath2 = ..\\ExtendHealth.SqlServer.IntegrationServices.Extensions.UI
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1721809F-73C1-4C97-923E-6141F1734478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1721809F-73C1-4C97-923E-6141F1734478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1721809F-73C1-4C97-923E-6141F1734478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1721809F-73C1-4C97-923E-6141F1734478}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5ECF94A-3C61-4F05-A9C3-8F1D950EDD6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5ECF94A-3C61-4F05-A9C3-8F1D950EDD6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5ECF94A-3C61-4F05-A9C3-8F1D950EDD6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5ECF94A-3C61-4F05-A9C3-8F1D950EDD6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
